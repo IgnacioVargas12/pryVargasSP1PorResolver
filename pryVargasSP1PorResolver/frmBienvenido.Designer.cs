@@ -28,96 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblUsuario = new Label();
-            lblContraseña = new Label();
-            lblModulo = new Label();
-            txtUsuario = new TextBox();
-            txtContraseña = new TextBox();
-            lstModulo = new ComboBox();
-            btnAceptar = new Button();
-            btnCancelar = new Button();
+            lblBienvenido = new Label();
+            lblSintepartSRL = new Label();
             SuspendLayout();
             // 
-            // lblUsuario
+            // lblBienvenido
             // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.Location = new Point(29, 38);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(47, 15);
-            lblUsuario.TabIndex = 0;
-            lblUsuario.Text = "Usuario";
+            lblBienvenido.AutoSize = true;
+            lblBienvenido.Font = new Font("Segoe UI", 22F);
+            lblBienvenido.Location = new Point(123, 47);
+            lblBienvenido.Name = "lblBienvenido";
+            lblBienvenido.Size = new Size(183, 41);
+            lblBienvenido.TabIndex = 0;
+            lblBienvenido.Text = "Bienvenido!!";
+            lblBienvenido.Click += lblBienvenido_Click;
             // 
-            // lblContraseña
+            // lblSintepartSRL
             // 
-            lblContraseña.AutoSize = true;
-            lblContraseña.Location = new Point(29, 81);
-            lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(67, 15);
-            lblContraseña.TabIndex = 1;
-            lblContraseña.Text = "Contraseña";
-            // 
-            // lblModulo
-            // 
-            lblModulo.AutoSize = true;
-            lblModulo.Location = new Point(29, 123);
-            lblModulo.Name = "lblModulo";
-            lblModulo.Size = new Size(49, 15);
-            lblModulo.TabIndex = 2;
-            lblModulo.Text = "Módulo";
-            // 
-            // txtUsuario
-            // 
-            txtUsuario.Location = new Point(124, 38);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(121, 23);
-            txtUsuario.TabIndex = 3;
-            // 
-            // txtContraseña
-            // 
-            txtContraseña.Location = new Point(124, 81);
-            txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(121, 23);
-            txtContraseña.TabIndex = 4;
-            // 
-            // lstModulo
-            // 
-            lstModulo.FormattingEnabled = true;
-            lstModulo.Location = new Point(124, 123);
-            lstModulo.Name = "lstModulo";
-            lstModulo.Size = new Size(121, 23);
-            lstModulo.TabIndex = 5;
-            // 
-            // btnAceptar
-            // 
-            btnAceptar.Location = new Point(335, 38);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(75, 23);
-            btnAceptar.TabIndex = 6;
-            btnAceptar.Text = "Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(335, 81);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
-            btnCancelar.TabIndex = 7;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            lblSintepartSRL.AutoSize = true;
+            lblSintepartSRL.BackColor = Color.FromArgb(255, 128, 128);
+            lblSintepartSRL.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblSintepartSRL.Location = new Point(103, 104);
+            lblSintepartSRL.Name = "lblSintepartSRL";
+            lblSintepartSRL.Size = new Size(235, 45);
+            lblSintepartSRL.TabIndex = 1;
+            lblSintepartSRL.Text = "Sinterpart SRL";
+            lblSintepartSRL.Click += lblSintepartSRL_Click;
             // 
             // frmBienvenido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(503, 228);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnAceptar);
-            Controls.Add(lstModulo);
-            Controls.Add(txtContraseña);
-            Controls.Add(txtUsuario);
-            Controls.Add(lblModulo);
-            Controls.Add(lblContraseña);
-            Controls.Add(lblUsuario);
+            ClientSize = new Size(441, 219);
+            Controls.Add(lblSintepartSRL);
+            Controls.Add(lblBienvenido);
             Name = "frmBienvenido";
             Text = "Bienvenido al sistema";
             ResumeLayout(false);
@@ -126,13 +70,7 @@
 
         #endregion
 
-        private Label lblUsuario;
-        private Label lblContraseña;
-        private Label lblModulo;
-        private TextBox txtUsuario;
-        private TextBox txtContraseña;
-        private ComboBox lstModulo;
-        private Button btnAceptar;
-        private Button btnCancelar;
+        private Label lblBienvenido;
+        private Label lblSintepartSRL;
     }
 }
