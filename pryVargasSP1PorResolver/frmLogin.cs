@@ -59,5 +59,17 @@ namespace pryVargasSP1PorResolver
                 txtContraseña.Enabled = true;
             }
         }
+
+        private void lstModulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstModulo.SelectedIndex > -1 && lstModulo.SelectedIndex < 4)
+            {
+                btnAceptar.Enabled = true;
+            }
+            else
+            {
+                btnAceptar.Enabled = false;
+            }
+        }
     }
 }

@@ -42,16 +42,18 @@
             // lblBienvenido
             // 
             lblBienvenido.AutoSize = true;
+            lblBienvenido.Font = new Font("Segoe UI", 12F);
             lblBienvenido.Location = new Point(329, 110);
             lblBienvenido.Name = "lblBienvenido";
-            lblBienvenido.Size = new Size(0, 15);
+            lblBienvenido.Size = new Size(0, 21);
             lblBienvenido.TabIndex = 0;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(336, 74);
+            btnCancelar.Font = new Font("Segoe UI", 12F);
+            btnCancelar.Location = new Point(335, 88);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.Size = new Size(88, 31);
             btnCancelar.TabIndex = 15;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // btnAceptar
             // 
             btnAceptar.Enabled = false;
+            btnAceptar.Font = new Font("Segoe UI", 12F);
             btnAceptar.Location = new Point(336, 31);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(75, 23);
+            btnAceptar.Size = new Size(87, 35);
             btnAceptar.TabIndex = 14;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
@@ -72,58 +75,65 @@
             // 
             lstModulo.DropDownStyle = ComboBoxStyle.DropDownList;
             lstModulo.Enabled = false;
+            lstModulo.Font = new Font("Segoe UI", 12F);
             lstModulo.FormattingEnabled = true;
             lstModulo.Items.AddRange(new object[] { "Administración", "Sistemas", "Compras", "Ventas" });
             lstModulo.Location = new Point(125, 116);
             lstModulo.Name = "lstModulo";
-            lstModulo.Size = new Size(121, 23);
+            lstModulo.Size = new Size(145, 29);
             lstModulo.TabIndex = 13;
+            lstModulo.SelectedIndexChanged += lstModulo_SelectedIndexChanged;
             // 
             // txtContraseña
             // 
             txtContraseña.Enabled = false;
+            txtContraseña.Font = new Font("Segoe UI", 12F);
             txtContraseña.Location = new Point(125, 74);
             txtContraseña.MaxLength = 10;
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = '#';
-            txtContraseña.Size = new Size(121, 23);
+            txtContraseña.Size = new Size(145, 29);
             txtContraseña.TabIndex = 12;
             txtContraseña.TextChanged += txtContraseña_TextChanged;
             // 
             // txtUsuario
             // 
+            txtUsuario.Font = new Font("Segoe UI", 12F);
             txtUsuario.ForeColor = Color.Blue;
             txtUsuario.Location = new Point(125, 31);
             txtUsuario.MaxLength = 10;
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(121, 23);
+            txtUsuario.Size = new Size(145, 29);
             txtUsuario.TabIndex = 11;
             txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
             // lblModulo
             // 
             lblModulo.AutoSize = true;
+            lblModulo.Font = new Font("Segoe UI", 12F);
             lblModulo.Location = new Point(30, 116);
             lblModulo.Name = "lblModulo";
-            lblModulo.Size = new Size(49, 15);
+            lblModulo.Size = new Size(64, 21);
             lblModulo.TabIndex = 10;
             lblModulo.Text = "Módulo";
             // 
             // lblContraseña
             // 
             lblContraseña.AutoSize = true;
+            lblContraseña.Font = new Font("Segoe UI", 12F);
             lblContraseña.Location = new Point(30, 74);
             lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(67, 15);
+            lblContraseña.Size = new Size(89, 21);
             lblContraseña.TabIndex = 9;
             lblContraseña.Text = "Contraseña";
             // 
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Segoe UI", 12F);
             lblUsuario.Location = new Point(30, 31);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(47, 15);
+            lblUsuario.Size = new Size(64, 21);
             lblUsuario.TabIndex = 8;
             lblUsuario.Text = "Usuario";
             // 
@@ -131,7 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(440, 185);
+            ClientSize = new Size(476, 201);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(lstModulo);
