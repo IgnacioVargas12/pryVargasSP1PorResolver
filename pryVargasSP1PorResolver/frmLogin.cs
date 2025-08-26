@@ -37,6 +37,7 @@ namespace pryVargasSP1PorResolver
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
+            //el if valida que se escriba la contraseña para activar la lista desplegable
             if (txtContraseña.Text == "")
             {
                 lstModulo.Enabled = false;
@@ -62,6 +63,7 @@ namespace pryVargasSP1PorResolver
 
         private void lstModulo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //el if valida que se seleccione algo en la lista para habilitar el boton aceptar
             if (lstModulo.SelectedIndex > -1 && lstModulo.SelectedIndex < 4)
             {
                 btnAceptar.Enabled = true;
