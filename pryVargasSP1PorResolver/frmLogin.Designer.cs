@@ -55,19 +55,25 @@
             btnCancelar.TabIndex = 15;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnAceptar
             // 
+            btnAceptar.Enabled = false;
             btnAceptar.Location = new Point(336, 31);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(75, 23);
             btnAceptar.TabIndex = 14;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // lstModulo
             // 
+            lstModulo.DropDownStyle = ComboBoxStyle.DropDownList;
+            lstModulo.Enabled = false;
             lstModulo.FormattingEnabled = true;
+            lstModulo.Items.AddRange(new object[] { "Administración", "Sistemas", "Compras", "Ventas" });
             lstModulo.Location = new Point(125, 116);
             lstModulo.Name = "lstModulo";
             lstModulo.Size = new Size(121, 23);
@@ -75,17 +81,24 @@
             // 
             // txtContraseña
             // 
+            txtContraseña.Enabled = false;
             txtContraseña.Location = new Point(125, 74);
+            txtContraseña.MaxLength = 10;
             txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '#';
             txtContraseña.Size = new Size(121, 23);
             txtContraseña.TabIndex = 12;
+            txtContraseña.TextChanged += txtContraseña_TextChanged;
             // 
             // txtUsuario
             // 
+            txtUsuario.ForeColor = Color.Blue;
             txtUsuario.Location = new Point(125, 31);
+            txtUsuario.MaxLength = 10;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(121, 23);
             txtUsuario.TabIndex = 11;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
             // lblModulo
             // 
@@ -118,7 +131,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(440, 179);
+            ClientSize = new Size(440, 185);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(lstModulo);
