@@ -21,9 +21,30 @@ namespace pryVargasSP1PorResolver
         {
             //El boton te lleva de un formulario a otro
 
-
-            frmBienvenido frmBienvenido = new frmBienvenido();
-            frmBienvenido.ShowDialog();
+            if (txtUsuario.Text == "Adm" && txtContraseña.Text == "1@" && (lstModulo.SelectedIndex == 0 || lstModulo.SelectedIndex == 2 || lstModulo.SelectedIndex == 3))
+            {
+                frmBienvenido frmbienvenido = new frmBienvenido();
+                frmbienvenido.ShowDialog();
+            }
+            else if (txtUsuario.Text == "John" && txtContraseña.Text == "*2b" && lstModulo.SelectedIndex == 1)
+            {
+                frmBienvenido frmbienvenido = new frmBienvenido();
+                frmbienvenido.ShowDialog();
+            }
+            else if (txtUsuario.Text == "Ceci" && txtContraseña.Text == "*@3c" && (lstModulo.SelectedIndex == 0 || lstModulo.SelectedIndex == 3))
+            {
+                frmBienvenido frmbienvenido = new frmBienvenido();
+                frmbienvenido.ShowDialog();
+            }
+            else if (txtUsuario.Text == "God" && txtContraseña.Text == "*@#4d" && (lstModulo.SelectedIndex == 0 || lstModulo.SelectedIndex == 1 || lstModulo.SelectedIndex == 2 || lstModulo.SelectedIndex == 3))
+            {
+                frmBienvenido frmbienvenido = new frmBienvenido();
+                frmbienvenido.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o contraseña incorrectos para el módulo seleccionado");
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
