@@ -12,38 +12,49 @@ namespace pryVargasSP1PorResolver
 {
     public partial class frmLogin : Form
     {
+        private int Intentos = 0; //variable contador para validar cantidad de intentos
         public frmLogin()
         {
             InitializeComponent();
         }
+        
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //El boton te lleva de un formulario a otro
+            //El boton te lleva de un formulario a otro, primero validando que los datos son correctos
 
             if (txtUsuario.Text == "Adm" && txtContraseña.Text == "1@" && (lstModulo.SelectedIndex == 0 || lstModulo.SelectedIndex == 2 || lstModulo.SelectedIndex == 3))
             {
+                Intentos = 0;
                 frmBienvenido frmbienvenido = new frmBienvenido();
                 frmbienvenido.ShowDialog();
             }
             else if (txtUsuario.Text == "John" && txtContraseña.Text == "*2b" && lstModulo.SelectedIndex == 1)
             {
+                Intentos = 0;
                 frmBienvenido frmbienvenido = new frmBienvenido();
                 frmbienvenido.ShowDialog();
             }
             else if (txtUsuario.Text == "Ceci" && txtContraseña.Text == "*@3c" && (lstModulo.SelectedIndex == 0 || lstModulo.SelectedIndex == 3))
             {
+                Intentos = 0;
                 frmBienvenido frmbienvenido = new frmBienvenido();
                 frmbienvenido.ShowDialog();
             }
             else if (txtUsuario.Text == "God" && txtContraseña.Text == "*@#4d" && (lstModulo.SelectedIndex == 0 || lstModulo.SelectedIndex == 1 || lstModulo.SelectedIndex == 2 || lstModulo.SelectedIndex == 3))
             {
+                Intentos = 0;
                 frmBienvenido frmbienvenido = new frmBienvenido();
                 frmbienvenido.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Usuario y/o contraseña incorrectos para el módulo seleccionado");
+                Intentos++;
+                if (Intentos == 3)
+                {
+                    this.Close(); //cierra el formulario
+                }
             }
         }
 
