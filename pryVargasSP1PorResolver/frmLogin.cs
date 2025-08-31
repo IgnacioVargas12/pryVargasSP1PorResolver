@@ -18,7 +18,7 @@ namespace pryVargasSP1PorResolver
             InitializeComponent();
         }
         
-
+        //Prueba de que se haya hecho el commit correctamente despues del merge de la rama a master
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             //El boton te lleva de un formulario a otro, primero validando que los datos son correctos
