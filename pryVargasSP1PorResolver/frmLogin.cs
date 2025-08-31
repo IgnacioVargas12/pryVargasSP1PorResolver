@@ -20,6 +20,8 @@ namespace pryVargasSP1PorResolver
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             //El boton te lleva de un formulario a otro
+
+
             frmBienvenido frmBienvenido = new frmBienvenido();
             frmBienvenido.ShowDialog();
         }
